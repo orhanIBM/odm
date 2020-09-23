@@ -131,7 +131,7 @@ public class BatchRunner implements DBAccess {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(BatchRunner.class, args);
-//        System.out.print("Docker!");
+        System.out.print("app started!");
         testConnection();
         BatchRunner runner = new BatchRunner();
         runner.run();
