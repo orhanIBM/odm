@@ -8,7 +8,7 @@ RUN mvn package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-RUN mkdir -p res_data
+RUN mkdir -p res_data && mkdir -p res_xom
 # VOLUME res_data
 COPY ./res_data ./res_data
 COPY --from=MAVEN_BUILD build/odmBatch/target/*.jar ./app.jar
